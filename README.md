@@ -1,0 +1,3 @@
+# Konrad Gladysz
+
+*Software Developer*
