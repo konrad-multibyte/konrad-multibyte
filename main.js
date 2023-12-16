@@ -50,4 +50,11 @@ function setInitialColorScheme() {
 
 document.getElementById("darkModeControl").addEventListener("change", switchColorScheme);
 
+window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (event) {
+		const colorScheme = event.matches;
+        localStorage.setItem("darkModeControl", colorScheme);
+        document.getElementById("darkModeControl").checked = colorScheme;
+        setColorScheme(colorScheme);
+	});
+
 setInitialColorScheme();
