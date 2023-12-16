@@ -4,6 +4,10 @@
     --primary-white: #ffffff;
 }
 
+.padding-1 {
+    padding: 1em 1em 1em 1em;
+}
+
 @font-face {
     font-family: 'Montserrat';
     src: url('Montserrat-VariableFont_wght.ttf');
@@ -15,9 +19,9 @@ body {
     text-wrap: wrap;
 }
 
-.flex {
+.flex-row {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .stack {
@@ -33,15 +37,13 @@ body {
     color: var(--primary-white);
     text-align: right;
     box-sizing: border-box;
-    padding: 1em 1em 1em 0;
 }
 
-.side {
-    width: 20%;
+.left {
+    flex: 20%;
     background-color: var(--primary-gray);
     color: var(--primary-white);
     text-align: right;
-    padding: 1em 2em 1em 2em;
 }
 
 .stack button {
@@ -65,10 +67,15 @@ body {
     color: var(--primary-white)
 }
 
-.main {
-    flex-grow: 1;
+.right {
+    flex: 80%;
     background-color: var(--primary-white);
     text-align: right;
     box-sizing: border-box;
-    padding: 1em 1em 1em 1em;
+}
+
+@media only screen and (max-width: 768px) {
+    .flex-row {
+        flex-direction: column;
+    }
 }
