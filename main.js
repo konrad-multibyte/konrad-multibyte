@@ -22,6 +22,10 @@ function setColorScheme(darkModeControl) {
             for (let className of colorItem.light) {
                 document.getElementById(colorItem.id).classList.remove(className);
             }
+            for (let button of document.querySelectorAll('.button-black')) {
+                button.classList.add("button-white");
+                button.classList.remove("button-black");
+            }
         }
     } else {
         for (let colorItem of colorMap) {
@@ -31,30 +35,37 @@ function setColorScheme(darkModeControl) {
             for (let className of colorItem.dark) {
                 document.getElementById(colorItem.id).classList.remove(className);
             }
+            for (let button of document.querySelectorAll('.button-white')) {
+                button.classList.add("button-black");
+                button.classList.remove("button-white");
+            }
         }
     }
 }
 
 function switchColorScheme() {
-    localStorage.setItem("darkModeControl", document.getElementById("darkModeControl").checked);
-    setColorScheme(document.getElementById("darkModeControl").checked);
+    const value = document.getElementById("darkModeControl").checked;
+    localStorage.setItem("darkModeControl", value);
+    setColorScheme(value);
 }
 
 function setInitialColorScheme() {
+    const darkModeControl =  getPerferedColorScheme() == "dark" ? true : false;
     if (localStorage.getItem("darkModeControl") == null) {
-        // localStorage.setItem("darkModeControl", getPerferedColorScheme() == "dark" ? true : false);
+        localStorage.setItem("darkModeControl", darkModeControl);
     }
-    document.getElementById("darkModeControl").checked = localStorage.getItem("darkModeControl");
-    setColorScheme(localStorage.getItem("darkModeControl"));
+    document.getElementById("darkModeControl").checked =  darkModeControl;
+    setColorScheme(darkModeControl);
 }
 
 document.getElementById("darkModeControl").addEventListener("change", switchColorScheme);
+document.getElementById("darkModeControlReset").addEventListener("click",  setInitialColorScheme)
 
 window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change", function (event) {
-		const colorScheme = event.matches;
-        localStorage.setItem("darkModeControl", colorScheme);
-        document.getElementById("darkModeControl").checked = colorScheme;
-        setColorScheme(colorScheme);
-	});
+    const colorScheme = event.matches;
+    localStorage.setItem("darkModeControl", colorScheme);
+    document.getElementById("darkModeControl").checked = colorScheme;
+    setColorScheme(colorScheme);
+});
 
 setInitialColorScheme();

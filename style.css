@@ -69,12 +69,12 @@ body {
     text-align: right;
 }
 
-.stack button {
+.stack div {
     padding: 5px;
     box-sizing: border-box;
-    border: 2px solid;
+    border: 2px solid white;
     background-color: inherit;
-    color: var(--primary-white);
+    color: white;
 }
 
 .border-light {
@@ -176,6 +176,22 @@ input:checked+.slider:before {
     padding: 0.5em 0.5em 0.5em 0.5em;
 }
 
+.button.button-reset {    
+    border: none;
+    background-color: inherit;
+    color: black;
+    text-decoration: underline;
+    font-family: 'Montserrat', sans-serif, serif;
+}
+
+.button.button-white {
+    color: white;
+}
+
+.button.button-black {
+    color: black;
+}
+
 @media only screen and (max-width: 768px) {
     .flex-row {
         flex-direction: column;
@@ -185,5 +201,9 @@ input:checked+.slider:before {
 @media (prefers-color-scheme:dark) {
     .slider:before {
         background-color: var(--primary-1);
+    }
+
+    .button.button-reset {
+        color: white;
     }
 }
