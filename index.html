@@ -9,52 +9,63 @@
 </head>
 
 <body>
-    <div class="header padding-1">
+    <div id="darkMode" class="primary-5">
+        <div class="control">
+            <label for="darkModeControl" class="bold v-center h-center">Dark Mode</label>
+            <label class="switch bold">
+                <input id="darkModeControl" type="checkbox">
+                <span class="round slider"></span>
+            </label>
+            <button id="darkModeControlReset" class="button button-reset button-black">Reset</button>
+        </div>
+    </div>
+    <div id="header" class="header padding-1 primary-2">
         <h1>Konrad Gladysz</h1>
         <p>Software Developer</p>
         <p>Dublin, Ireland</p>
     </div>
     <div class="flex-row">
-        <div class="left padding-1">
+        <div id="left" class="left padding-1 primary-3 border-dark">
             <div class="about">
                 <h2>About me</h2>
                 <p>
-                    Software developer with experience creating and maintaining applications.. I work with Java, C#, Web.
+                    Software developer with experience creating and maintaining applications.. I work with Java, C#,
+                    Web.
                 </p>
             </div>
             <div class="skills">
                 <h2>Skills</h2>
             </div>
             <div class="stack">
-                <button>HTML5</button>
-                <button>CSS</button>
-                <button>JavaScript</button>
-                <button>TypeScript</button>
-                <button>Java</button>
-                <button>.NET Core</button>
-                <button>.NET Framework</button>
-                <button>Nuxt 3</button>
-                <button>Vue</button>
+                <div>HTML5</div>
+                <div>CSS</div>
+                <div>JavaScript</div>
+                <div>TypeScript</div>
+                <div>Java</div>
+                <div>.NET Core</div>
+                <div>.NET Framework</div>
+                <div>Nuxt 3</div>
+                <div>Vue</div>
             </div>
             <div class="contact">
                 <h2>Contact</h2>
                 <a href="mailto:konrad.gladysz@gmail.com">konrad.gladysz@gmail.com</a>
             </div>
         </div>
-        <div class="right padding-1">
+        <div id="right" class="right padding-1 primary-5">
             <div class="experience">
                 <h2>Experience</h2>
                 <div class="work">
                     <h3>Software Developer</h3>
                     <p>Tallaght University Hospital</p>
                     <p>since April 2023</p>
-                    <p>Electronic patient record software developer.</p>
+                    <p>Electronic patient record application software developer.</p>
                 </div>
                 <div class="work">
                     <h3>Senior Applications Support Administrator</h3>
                     <p>Tallaght University Hospital</p>
                     <p>October 2022 - April 2023 </p>
-                    <p>Business application support. Website, recruitment, dictaction apps.</p>
+                    <p>Business application support. Website, recruitment, dictaction applications.</p>
                 </div>
                 <div class="work">
                     <h3>Service Desk Technician</h3>
@@ -69,7 +80,8 @@
                     <h3>Honours Bachelor of Science with Software Development</h3>
                     <p>Technological University Dublin</p>
                     <p>2019 - 2020</p>
-                    <p>Containerization, Virtualization, Applied Artificial Intelligence, Enterprise Software Development</p>
+                    <p>Containerization, Virtualization, Applied Artificial Intelligence, Enterprise Software
+                        Development</p>
                 </div>
                 <div class="school">
                     <h3>Bachelor of Science with Software Development</h3>
@@ -90,20 +102,24 @@
                 <h2>Projects</h2>
                 <div class="project">
                     <h3>Activiti DevTools</h3>
-                    <p>Currently coding a website developer tools for Activiti. This tool saves developer's time and has integrated testing tools.</p>
+                    <p>Currently coding a website developer tools for Activiti. This tool saves developer's time and has
+                        integrated testing tools.</p>
                 </div>
                 <div>
                     <h3>OS Building</h3>
-                    <p>Developed and maintained various custom operating system tools to speed up maintenace and recovery.</p>
+                    <p>Developed and maintained various custom operating system tools to speed up maintenace and
+                        recovery.</p>
                 </div>
                 <div class="project">
                     <h3>Timetable App</h3>
-                    <p>Developed an hosted my own timetable app during college, because the school timetable website was not mobile friendly.</p>
-                    <p>Got  20 unique active visitors per day.</p>
+                    <p>Developed an hosted my own timetable app during college, because the school timetable website was
+                        not mobile friendly.</p>
+                    <p>Got 20 unique active visitors per day.</p>
                 </div>
             </div>
         </div>
     </div>
+    <script src="main.js"></script>
 </body>
 
 </html>
